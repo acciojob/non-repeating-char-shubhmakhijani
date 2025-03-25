@@ -1,63 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>First Non-Repeating Character</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
-        }
-        input {
-            padding: 8px;
-            font-size: 16px;
-        }
-        button {
-            padding: 8px 15px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        p {
-            font-size: 18px;
-            font-weight: bold;
-            margin-top: 20px;
-        }
-    </style>
+	<link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-
-    <h2>Find First Non-Repeating Character</h2>
-    <input type="text" id="inputString" placeholder="Enter a string">
-    <button onclick="findFirstNonRepeated()">Find</button>
-    <p id="result"></p>
-
-    <script>
-        function firstNonRepeatedChar(str) {
-            let charCount = {}; // To store character frequencies
-
-            // Step 1: Count occurrences of each character
-            for (let char of str) {
-                charCount[char] = (charCount[char] || 0) + 1;
-            }
-
-            // Step 2: Find the first character with count 1
-            for (let char of str) {
-                if (charCount[char] === 1) {
-                    return char;
-                }
-            }
-
-            return null; // No non-repeating character found
-        }
-
-        function findFirstNonRepeated() {
-            let inputText = document.getElementById("inputString").value.trim();
-            let result = firstNonRepeatedChar(inputText);
-            document.getElementById("result").textContent = result ? First Non-Repeating Character: ${result} : "No non-repeating character found.";
-        }
-    </script>
+	<!-- the entire body must be written by student -->
+    <script type="text/javascript" src="./script.js">
+</script>
 
 </body>
+
 </html>
